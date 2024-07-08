@@ -1,16 +1,68 @@
-# planner
+# Planner App
 
-A new Flutter project.
+![Planner Logo](assets/images/planner_logo.png)
+
+Planner is a personal expense tracker and financial planning app designed to help you manage your finances effectively. Whether you're tracking daily expenses, planning for future goals, or managing recurring bills, Planner has you covered.
+
+## Features
+
+1. **Transaction Tracking**:
+
+   - Add income and expense transactions.
+   - Categorize transactions (groceries, rent, entertainment, etc.).
+   - Set recurring transactions (e.g., monthly salary).
+
+2. **Budget Management**:
+
+   - Define monthly budget limits for different categories.
+   - Receive notifications when approaching budget limits.
+
+3. **Plan Your Goals**:
+
+   - Create short-term and long-term plans (e.g., Diner Date, Fridge).
+   - Set target amounts and due dates.
+   - Monitor progress toward your goals.
+
+4. **Bill Reminders**:
+
+   - Add bills with specific due dates.
+   - Receive reminders before due dates.
+   - Mark bills as paid.
+
+5. **Savings Goals**:
+   - Set savings targets (Emergency Fund, Fridge Fund, etc.).
+   - Track progress toward your savings goals.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone this repository:
 
-A few resources to get you started if this is your first Flutter project:
+   ```bash
+   git clone https://github.com/yourusername/planner.git
+   ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+2. Install dependencies:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+   ```dart
+   flutter pub get
+   ```
+
+3. Run the app:
+
+   ```dart
+   flutter run
+   ```
+
+## Screenshots
+
+![Home Screen](screenshots/home_screen.png)
+![Transactions Screen](screenshots/transactions_screen.png)
+![Plans Screen](screenshots/plans_screen.png)
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have feature requests, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
