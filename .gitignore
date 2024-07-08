@@ -1,0 +1,7 @@
+# Flutter/Dart
+build/
+.idea/
+.vscode/
+*.iml
+*.log
+
