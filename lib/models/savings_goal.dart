@@ -1,25 +1,33 @@
 class SavingsGoal {
-  final int id;
-  final int userId;
+  final int? id;
   final String name;
   final double targetAmount;
-  final double progress;
+  final int userId;
 
   SavingsGoal({
-    required this.id,
-    required this.userId,
+    this.id,
     required this.name,
     required this.targetAmount,
-    required this.progress,
+    required this.userId,
   });
 
+  // Convert a SavingsGoal object into a map.
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'userId': userId,
       'name': name,
-      'targetAmount': targetAmount,
-      'progress': progress,
+      'target_amount': targetAmount,
+      'user_id': userId,
     };
+  }
+
+  // Convert a map into a SavingsGoal object.
+  factory SavingsGoal.fromMap(Map<String, dynamic> map) {
+    return SavingsGoal(
+      id: map['id'],
+      name: map['name'],
+      targetAmount: map['target_amount'],
+      userId: map['user_id'],
+    );
   }
 }

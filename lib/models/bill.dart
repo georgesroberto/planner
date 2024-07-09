@@ -1,33 +1,41 @@
 class Bill {
-  final int id;
-  final int userId;
+  final int? id;
   final String name;
   final double amount;
   final DateTime dueDate;
   final bool paid;
-  final bool recurring;
-  final double partialPayment;
+  final int userId;
 
-  Bill(
-      {required this.id,
-      required this.userId,
-      required this.name,
-      required this.amount,
-      required this.dueDate,
-      required this.paid,
-      required this.recurring,
-      required this.partialPayment});
+  Bill({
+    this.id,
+    required this.name,
+    required this.amount,
+    required this.dueDate,
+    required this.paid,
+    required this.userId,
+  });
 
+  // Convert a Bill object into a map.
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'userId': userId,
       'name': name,
       'amount': amount,
-      'dueDate': dueDate,
-      'paid': paid,
-      'recurring': recurring,
-      'partialPayment': partialPayment,
+      'due_date': dueDate.toIso8601String(),
+      'paid': paid ? 1 : 0,
+      'user_id': userId,
     };
+  }
+
+  // Convert a map into a Bill object.
+  factory Bill.fromMap(Map<String, dynamic> map) {
+    return Bill(
+      id: map['id'],
+      name: map['name'],
+      amount: map['amount'],
+      dueDate: DateTime.parse(map['due_date']),
+      paid: map['paid'] == 1,
+      userId: map['user_id'],
+    );
   }
 }

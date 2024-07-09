@@ -1,34 +1,41 @@
 class Transaction {
-  final int id;
-  final int userId;
+  final int? id;
   final double amount;
-  final int categoryId;
+  final String category;
   final DateTime date;
   final String notes;
-  final bool recurring;
-  final String encryptionKey;
+  final int userId;
 
   Transaction({
-    required this.id,
-    required this.userId,
+    this.id,
     required this.amount,
-    required this.categoryId,
+    required this.category,
     required this.date,
     required this.notes,
-    required this.recurring,
-    required this.encryptionKey,
+    required this.userId,
   });
 
+  // Convert a Transaction object into a map.
   Map<String, dynamic> toMap() {
     return {
       'id': id,
-      'userId': userId,
       'amount': amount,
-      'categoryId': categoryId,
+      'category': category,
       'date': date.toIso8601String(),
       'notes': notes,
-      'recurring': recurring ? 1 : 0,
-      'encryptionKey': encryptionKey,
+      'user_id': userId,
     };
+  }
+
+  // Convert a map into a Transaction object.
+  factory Transaction.fromMap(Map<String, dynamic> map) {
+    return Transaction(
+      id: map['id'],
+      amount: map['amount'],
+      category: map['category'],
+      date: DateTime.parse(map['date']),
+      notes: map['notes'],
+      userId: map['user_id'],
+    );
   }
 }
