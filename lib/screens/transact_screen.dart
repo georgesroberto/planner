@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:planner/components/custom_bottom_nav_bar.dart';
-import 'package:planner/screens/transact_screen.dart';
+import 'package:planner/screens/home_screen.dart';
 import 'package:planner/screens/plan_details_screen.dart';
 import 'package:planner/screens/records_screen.dart';
 import 'package:planner/screens/settings_screen.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
-  static const String routeName = '/';
+class TransactScreen extends StatefulWidget {
+  const TransactScreen({super.key});
+  static const String routeName = '/transact';
 
   @override
-  HomeScreenState createState() => HomeScreenState();
+  State<TransactScreen> createState() => _TransactScreenState();
 }
 
-class HomeScreenState extends State<HomeScreen> {
-  int _currentIndex = 2; // Starting with Home tab
+class _TransactScreenState extends State<TransactScreen> {
+  int _currentIndex = 3;
 
   void _onTap(int index) {
     setState(() {
@@ -23,12 +23,12 @@ class HomeScreenState extends State<HomeScreen> {
 
     switch (_currentIndex) {
       case 0:
-        Navigator.of(context).pushReplacementNamed(TransactScreen.routeName);
         break;
       case 1:
         Navigator.of(context).pushReplacementNamed(PlanDetailsScreen.routeName);
         break;
       case 2:
+        Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
         break;
       case 3:
         Navigator.of(context).pushReplacementNamed(RecordsScreen.routeName);
@@ -45,10 +45,11 @@ class HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('Transact'),
+        elevation: 0,
       ),
       body: const Center(
-        child: Text('Home Screen'),
+        child: Text('Transact Screen'),
       ),
       bottomNavigationBar: CustomBottomNavBar(
         currentIndex: _currentIndex,

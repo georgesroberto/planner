@@ -135,15 +135,15 @@
     },
     {
       "name": "sqflite",
-      "rootUri": "file:///C:/Users/Georges/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.3.2",
+      "rootUri": "file:///C:/Users/Georges/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite-2.3.3+1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "sqflite_common",
-      "rootUri": "file:///C:/Users/Georges/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.3",
+      "rootUri": "file:///C:/Users/Georges/AppData/Local/Pub/Cache/hosted/pub.dev/sqflite_common-2.5.4",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "stack_trace",
@@ -200,7 +200,7 @@
       "languageVersion": "3.2"
     }
   ],
-  "generated": "2024-07-09T14:16:55.938733Z",
+  "generated": "2024-07-10T07:51:48.123674Z",
   "generator": "pub",
   "generatorVersion": "3.4.3",
   "flutterRoot": "file:///D:/flutter_windows_3.16.0-stable/flutter",

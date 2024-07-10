@@ -4,12 +4,13 @@ import 'package:provider/provider.dart';
 
 class NotificationsScreen extends StatelessWidget {
   const NotificationsScreen({super.key});
-
+  static const String routeName = '/notifications';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Notifications'),
+        elevation: 0,
       ),
       body: Consumer<NotificationProvider>(
         builder: (context, provider, child) {
